@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #f0f2f5;
+}
+
+.container {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.task-form {
+    margin-bottom: 20px;
+}
+
+.task-input {
+    width: calc(100% - 100px); /* Adjust width as needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-submit {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-submit:hover {
+    background-color: rgb(24, 74, 168);
+}
+
+.welcome-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.welcome-text {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.ulogoutbtn {
+    background-color: firebrick;
+    color: white;
+    padding: 10px; /* Added padding */
+    border-radius: 5px; /* Added border-radius */
+    text-decoration: none; /* Removed underline */
+    display: inline-block; /* Added to allow padding and border-radius to work */
+}
+
+.task-item {
+    margin-bottom: 10px;
+    padding: 3px;
+    display: flex;
+}
+
+.task-linkupdate {
+    background-color: green;
+}
+.task-linkupdate:hover {
+    background-color: rgb(6, 88, 6);
+}
+.task-linkdelete {
+    background-color: red;
+}
+.task-linkdelete:hover {
+    background-color: rgb(208, 1, 1);
+}
+.task-linkupdate,
+.task-linkdelete {
+    padding: 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+.task-completed, 
+.task-not-completed {
+    width: 80%;
+    font-size: 20px;
+
+}
+.task-completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-not-completed {
+    color: #333;
+}

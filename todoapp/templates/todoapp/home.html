@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'todoapp/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-container">
+            <span class="welcome-text">Welcome {{username}}</span>
+            <a href="{% url 'ulogout' %}" class="ulogoutbtn">Logout</a>
+        </div>
+        <form action="" method="POST" class="task-form">
+            {% csrf_token %}
+            <input type="text" name="task" required class="task-input">
+            <input type="submit" value="Save" class="task-submit">
+        </form>
+        {% for task in tasks %}
+            <div class="task-item">
+                {% if task.complete == True %}
+                <span class="task-completed">{{task.title}}</span>
+                {% else %}
+                <span class="task-not-completed">{{task.title}}</span>
+                {% endif %}
+                <a href="{% url 'update_task' task.id %}" class="task-linkupdate">Update</a>
+                <a href="{% url 'delete_task' task.id %}" class="task-linkdelete">Delete</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
